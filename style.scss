@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+body {
+    background-image: linear-gradient(to left, black, #222);
+}
+p {
+    a {
+        color: white;
+        text-decoration: wavy underline;
+    }
+    a:hover {
+        color: grey;
+        text-decoration: underline;
+    }
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  size: 50px;
+  color: white;
+  p {
+    font-size: small;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+}
+#main {
+    font-family: "Asset", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    p {
+        padding: 50px;
+        font-size: medium !important;
+        font-family: "Roboto Mono", monospace !important;
+        font-optical-sizing: auto !important;
+        font-style: normal !important;
+    }
+}
+.title {
+    padding-bottom: 20px;
+    text-align: center;
+    h1:hover {
+        text-decoration: underline;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+// img formating
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 20px;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+  .right {
+    float: right;
+    margin-left: 1em;
+  }
+  .left {
+    float: left;
+    margin-right: 1em;
+  }
+  .center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  @media only screen and (min-width: 600px) {
+    .small {
+      max-width: 60%;
+      height: auto;
+    }
+  }
