@@ -1,3 +1,8 @@
+# **  *** **. ***   *   *      ***** * *
+# * * **  ***  |   * *  *__     *._  ***
+# **  *** **' *** *   * *  * <>***** * *
+# Made by ROKY HENDERSON (https://roky.rhhen.xyz/)
+# Copy Right (C)
 if [ ! -f "/etc/debian_version" ]; then
 	echo *==* Error $ Throw $ *==*
 	echo *==* This is not a Deb-Ian Based System *==*
@@ -13,9 +18,11 @@ fi
 if [ ! -f "/bin/curl" ]; then
 	echo *==* Error $ Throw $ *==*
 	echo *==* Curl is not installed *==*
+ 	echo 
 	echo *==* Error $ Result $ *==*
 	exit
 fi
+clear
 echo "
     ___     _     _                   _     
    /   \___| |__ (_) __ _ _ __    ___| |__  
@@ -23,13 +30,20 @@ echo "
  / /_//  __/ |_) | | (_| | | | |_\__ \ | | |
 /___,/ \___|_.__/|_|\__,_|_| |_(_)___/_| |_|
 "
+echo *==* Welcome to DEBIAN.SH *==*
+echo Do you wish to continue? [y/n]
+read usrinput
+if [ $usrinput == "n" ]; then
+	echo Aborted
+ 	exit
+fi
 echo *==* Updating APT *==*
 apt update 1>/dev/null 2>&1
 echo *==* Updating APT-GET *==*
 apt-get update 1>/dev/null 2>&1
 echo *==* Installing HB PKG M *==*
 # HB PKG M
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo >> /root/.
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
