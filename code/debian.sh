@@ -33,7 +33,7 @@ echo "
 echo *==* Welcome to DEBIAN.SH *==*
 echo Do you wish to continue? [y/n]
 usrinput="$(read)"
-if [ $usrinput == "n" ]; then
+if [ $usrinput  "n" ]; then
 	echo Aborted
  	exit
 fi
