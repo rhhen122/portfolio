@@ -31,12 +31,8 @@ echo "
 /___,/ \___|_.__/|_|\__,_|_| |_(_)___/_| |_|
 "
 echo *==* Welcome to DEBIAN.SH *==*
-echo Do you wish to continue? [y/n]
-usrinput="$(read)"
-if [[ $usrinput == "n" ]]; then
-	echo Aborted
- 	exit
-fi
+echo Do you wish to continue? [Enter/Cntrl + C]
+read
 echo *==* Updating APT *==*
 apt update 1>/dev/null 2>&1
 echo *==* Updating APT-GET *==*
