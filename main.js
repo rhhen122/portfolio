@@ -1,7 +1,13 @@
 // This is your domain.
 function main() {
     // this is the code that will be rendered
-    style('style.css');
+    const urlParams = new URLSearchParams(window.location.search);
+    const theme = urlParams.get('theme');
+    if (theme == "light") {
+        style('light.css');
+    } else {
+        style('style.css');
+    }
     title('rhhen122');
 
     header('rhhen122', '', '', '', '1');
@@ -29,6 +35,10 @@ function main() {
 
 
     raw('<p><a href="https://github.com/rhhen122/angstrom-nitro">(powered by angstrom nitro)</a></p>');
+
+    header('theme', '', '', '', '2');
+    raw('<p><a href="/">Dark Mode</a></p>');
+    raw('<p><a href="/?theme=light">Light Mode</a></p>');
 }
 
 
